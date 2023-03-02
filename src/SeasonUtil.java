@@ -10,7 +10,7 @@ public class SeasonUtil {
     static String reportAll(Seasonable[] seasonables) {
         String report="";
         for(Seasonable item: seasonables) {
-            report += item.toString() +"\n";
+            report += item.toString();
         }
         return report;
     }

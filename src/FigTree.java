@@ -2,8 +2,9 @@ public class FigTree extends Tree {
 
     boolean haveLeaves = true;
     FigTree(int height, Season season) {
-        super(height,season,null);
-        updateBySeason();
+        super(height,season,Color.GREEN);
+        haveLeaves = season != Season.WINTER;
+        leavesColor = season == Season.FALL? Color.YELLOW: season == Season.WINTER? null: Color.GREEN;
     }
 
     @Override
@@ -37,6 +38,7 @@ public class FigTree extends Tree {
             case FALL:
                 height = RoundHeight(height + 20);
                 leavesColor=Color.YELLOW;
+                givesFruit=false;
                 break;
         }
     }

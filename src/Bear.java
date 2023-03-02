@@ -19,9 +19,12 @@ public class Bear extends Animal {
                 weight = roundWeight(weight * 0.8f);
                 isSleeping = true;
                 break;
-            case SPRING: weight = roundWeight(weight * 1.25f); break;
-            case SUMMER: weight = roundWeight(weight * (weight/3f)); break;
-            case FALL: weight = roundWeight(weight * 0.75f); break;
+            case SPRING:
+                weight = roundWeight(weight * 0.75f);
+                isSleeping = false;
+                break;
+            case SUMMER: weight = roundWeight(weight + (weight/3f)); break;
+            case FALL: weight = roundWeight(weight * 1.25f); break;
         }
     }
 }

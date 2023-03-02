@@ -25,15 +25,19 @@ public class Caribou extends Animal {
             case WINTER:
                 color = Color.WHITE;
                 isMigrating = true;
-                direction = Direction.SOUTH;
+                direction = Direction.south;
                 break;
             case SPRING:
                 color = Color.BROWN;
                 isMigrating = false;
+                break;
             case SUMMER:
                 isMigrating = true;
-                direction = Direction.NORTH;
-            case FALL: break;
+                direction = Direction.north;
+                break;
+            case FALL:
+                isMigrating = false;
+                break;
         }
     }
 }

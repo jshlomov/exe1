@@ -3,7 +3,7 @@ public class OliveTree extends Tree {
 
     OliveTree(int height, Season season) {
         super(height,season,Color.GREEN);
-        updateBySeason();
+        givesFruit = season == Season.FALL;
     }
 
     @Override
