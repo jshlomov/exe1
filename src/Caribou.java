@@ -4,7 +4,7 @@ public class Caribou extends Animal {
     Direction direction;
 
     Caribou(int weight, Season season) {
-        super(weight, season, null);
+        super(weight, season, Color.BROWN);
         updateBySeason();
     }
 
